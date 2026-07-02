@@ -30,6 +30,10 @@ const navigation = [
       { title: "Xanax Addiction", path: "/addiction/xanax-addiction" },
     ],
   },
+  {
+  title: "Admissions",
+  path: "/admissions",
+  },
   { title: "Contact Us", path: "/contact-us" },
 ];
 

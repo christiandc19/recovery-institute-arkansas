@@ -15,6 +15,8 @@ import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import TermsConditions from "../pages/TermsConditions/TermsConditions";
 import Accessibility from "../pages/Accessibility/Accessibility";
 import ProgramDetail from "../pages/ProgramDetail/ProgramDetail";
+import Admissions from "../pages/Admissions/Admissions";
+import ThankYou from "../pages/ThankYou/ThankYou";
 
 function AppRoutes() {
   return (
@@ -31,9 +33,11 @@ function AppRoutes() {
           <Route path="/addiction/:slug" element={<AddictionDetail />} />
           <Route path="/iop-substance-abuse" element={<IOP />} />
           <Route path="/contact-us" element={<Contact />} />
+          <Route path="/admissions" element={<Admissions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsConditions />} />
           <Route path="/accessibility" element={<Accessibility />} />
+          <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
