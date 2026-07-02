@@ -1,0 +1,38 @@
+.section-header {
+  max-width: 780px;
+  margin-bottom: 4rem;
+}
+
+.section-header--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-header--left {
+  text-align: left;
+}
+
+.section-header span {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-dark);
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+}
+
+.section-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}

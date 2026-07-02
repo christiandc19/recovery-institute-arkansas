@@ -1,0 +1,20 @@
+.treatment-approach__note {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.treatment-approach__note svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.treatment-approach__note p {
+  line-height: 1.7;
+  font-weight: 600;
+}

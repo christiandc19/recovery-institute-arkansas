@@ -1,0 +1,90 @@
+.iop-faq {
+  padding: 120px 0;
+  background: var(--bg-light);
+}
+
+.iop-faq__container {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.iop-faq__header span {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.iop-faq__header h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-dark);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+}
+
+.iop-faq__header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.iop-faq__list {
+  display: grid;
+  gap: 1rem;
+}
+
+.iop-faq__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.2rem;
+  background: #fff;
+  padding: 28px;
+  border-radius: 22px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  transition: 0.35s ease;
+}
+
+.iop-faq__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.1);
+}
+
+.iop-faq__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iop-faq__item h3 {
+  color: var(--text-dark);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.iop-faq__item p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .iop-faq {
+    padding: 80px 0;
+  }
+
+  .iop-faq__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

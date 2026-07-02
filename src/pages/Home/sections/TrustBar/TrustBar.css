@@ -1,0 +1,38 @@
+.trust-bar {
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trust-bar__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 28px 0;
+}
+
+.trust-bar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.trust-bar__item svg {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .trust-bar__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-bar__container {
+    grid-template-columns: 1fr;
+  }
+}

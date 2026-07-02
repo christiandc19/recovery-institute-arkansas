@@ -1,0 +1,83 @@
+.iop-process__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.iop-process__grid::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--border-color);
+  z-index: 0;
+}
+
+.iop-process__card {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-white);
+  padding: 34px 26px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.iop-process__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.iop-process__icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.iop-process__card span {
+  display: block;
+  color: var(--accent-color);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.iop-process__card h3 {
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+
+.iop-process__card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .iop-process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .iop-process__grid::before {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .iop-process__grid {
+    grid-template-columns: 1fr;
+  }
+}

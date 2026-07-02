@@ -1,0 +1,73 @@
+.why-outpatient {
+  background: white;
+}
+
+.why-outpatient__content span {
+  display: inline-block;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.why-outpatient__content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-dark);
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.why-outpatient__content > p {
+  color: var(--text-light);
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+.why-outpatient__note {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.why-outpatient__note svg {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.why-outpatient__note p {
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .why-outpatient {
+    padding: 80px 0;
+  }
+
+  .why-outpatient__container {
+    grid-template-columns: 1fr;
+  }
+
+  .why-outpatient__image img {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-outpatient__image::before {
+    display: none;
+  }
+
+  .why-outpatient__image img {
+    min-height: 340px;
+  }
+}

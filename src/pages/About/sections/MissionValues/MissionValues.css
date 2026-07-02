@@ -1,0 +1,129 @@
+.mission-values {
+  padding: 120px 0;
+  background: var(--bg-light);
+}
+
+.mission-values__header {
+  max-width: 780px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.mission-values__header span {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.mission-values__header h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-dark);
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1.2rem;
+}
+
+.mission-values__header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.mission-values__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.mission-values__card {
+  min-height: 260px;
+  padding: 32px;
+  border-radius: 26px;
+  background: white;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  transition: 0.35s ease;
+}
+
+.mission-values__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.11);
+}
+
+.mission-values__card--large {
+  grid-row: span 1;
+  background:
+    radial-gradient(circle at top right, rgba(134, 239, 172, 0.18), transparent 35%),
+    linear-gradient(135deg, #12326d, #1f4ea3);
+  color: white;
+}
+
+.mission-values__card svg {
+  width: 64px;
+  height: 64px;
+  padding: 17px;
+  border-radius: 18px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.mission-values__card--large svg {
+  background: rgba(255, 255, 255, 0.14);
+  color: #86efac;
+}
+
+.mission-values__card h3 {
+  font-size: 1.35rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.mission-values__card p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.mission-values__card--large h3 {
+  color: white;
+}
+
+.mission-values__card--large p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 992px) {
+  .mission-values {
+    padding: 80px 0;
+  }
+
+  .mission-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mission-values__card--large {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-story__cards p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+
+    margin-top: 0.75rem;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}

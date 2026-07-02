@@ -1,0 +1,93 @@
+.addiction-detail {
+  padding: 120px 0;
+  background: white;
+}
+
+.addiction-detail__container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.addiction-detail__content span {
+  display: inline-block;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.addiction-detail__content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-dark);
+  font-size: clamp(2.3rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.addiction-detail__content p {
+  color: var(--text-light);
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 1.3rem;
+}
+
+.addiction-detail__card {
+  background: var(--bg-light);
+  padding: 36px;
+  border-radius: 26px;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+}
+
+.addiction-detail__card h3 {
+  color: var(--text-dark);
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+}
+
+.addiction-detail__card ul {
+  display: grid;
+  gap: 1rem;
+}
+
+.addiction-detail__card li {
+  position: relative;
+  padding-left: 1.8rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.addiction-detail__card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  font-weight: 800;
+}
+
+.addiction-not-found {
+  padding: 120px 0;
+}
+
+.addiction-detail__content h2 + p {
+  margin-top: 0;
+}
+
+.addiction-detail__content p + h2 {
+  margin-top: 3rem;
+}
+
+@media (max-width: 992px) {
+  .addiction-detail {
+    padding: 80px 0;
+  }
+
+  .addiction-detail__container {
+    grid-template-columns: 1fr;
+  }
+}

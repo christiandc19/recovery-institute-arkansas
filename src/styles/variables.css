@@ -1,0 +1,35 @@
+:root {
+  /* Primary Brand */
+  --primary-color: #1d4ed8;
+  --primary-dark: #1e3a8a;
+  --primary-light: #dbeafe;
+
+  /* Accent */
+  --accent-color: #16a34a;
+
+  /* Text */
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --text-white: #ffffff;
+
+  /* Background */
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --bg-dark: #0f172a;
+
+  /* Border */
+  --border-color: #e5e7eb;
+
+  /* Container */
+  --container-width: 1200px;
+
+  /* Radius */
+  --border-radius: 12px;
+
+  /* Shadow */
+  --shadow:
+    0 8px 30px rgba(0, 0, 0, 0.08);
+
+  /* Transition */
+  --transition: all 0.3s ease;
+}

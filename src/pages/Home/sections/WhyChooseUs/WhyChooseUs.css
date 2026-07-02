@@ -1,0 +1,166 @@
+.why-choose {
+  padding: 120px 0;
+  background: var(--bg-white);
+}
+
+.why-choose__container {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.why-choose__image {
+  position: relative;
+}
+
+.why-choose__image img {
+
+  width:100%;
+
+  min-height:560px;
+
+  object-fit:cover;
+
+  border-radius:28px;
+
+  box-shadow:
+      0 30px 70px rgba(15,23,42,.12);
+
+}
+
+.why-choose__badge{
+
+    position:absolute;
+
+    bottom:30px;
+
+    right:-35px;
+
+    background:white;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 20px 50px rgba(15,23,42,.12);
+
+}
+
+.why-choose__badge strong,
+.why-choose__badge span {
+  display: block;
+}
+
+.why-choose__badge strong {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.why-choose__badge span {
+  color: var(--text-light);
+}
+
+.why-choose__eyebrow {
+  display: inline-block;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.why-choose h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-dark);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.why-choose p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+.why-choose__list {
+  display: grid;
+  gap: 1rem;
+}
+
+.why-choose__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  border: 1px solid #eef2f7;
+
+  transition: .35s ease;
+
+  box-shadow: 0 10px 25px rgba(15,23,42,.04);
+}
+
+.why-choose__item:hover {
+
+  transform: translateX(8px);
+
+  border-color: rgba(37,99,235,.25);
+
+  box-shadow: 0 20px 40px rgba(15,23,42,.08);
+
+}
+
+.why-choose__item svg {
+
+  width: 46px;
+  height: 46px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  background: rgba(37,99,235,.08);
+
+  color: var(--primary-color);
+
+  flex-shrink: 0;
+
+}
+
+@media (max-width: 992px) {
+  .why-choose {
+    padding: 80px 0;
+  }
+
+  .why-choose__container {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose__badge {
+    right: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose__image img {
+    min-height: 360px;
+  }
+
+  .why-choose__badge {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+}

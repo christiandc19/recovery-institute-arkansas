@@ -1,0 +1,120 @@
+.why-about {
+  padding: 120px 0;
+  background: white;
+}
+
+.why-about__container {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.why-about__content span {
+  display: inline-block;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .12em;
+  margin-bottom: 1rem;
+}
+
+.why-about__content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  max-width: 650px;
+  line-height: 1.05;
+}
+
+.why-about__content > p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.why-about__features {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.why-about__features > div {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+
+    padding: 1rem;
+    border-radius: 16px;
+
+    transition: .3s ease;
+}
+
+.why-about__features > div:hover {
+    background: #f8fbff;
+    transform: translateX(8px);
+}
+
+.why-about__features svg {
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.why-about__features h3 {
+  margin-bottom: .35rem;
+  color: var(--text-dark);
+}
+
+.why-about__features p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.why-about__image img {
+  width: 100%;
+  border-radius: 28px;
+  object-fit: cover;
+  box-shadow: 0 25px 60px rgba(15,23,42,.10);
+}
+
+@media (max-width: 992px) {
+  .why-about {
+    padding: 80px 0;
+  }
+
+  .why-about__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.why-about__image {
+    position: relative;
+}
+
+.why-about__image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -35px;
+    bottom: -35px;
+
+    border-radius: 24px;
+
+    background: rgba(37,99,235,.08);
+
+    z-index: 0;
+}
+
+.why-about__image img {
+    position: relative;
+    z-index: 1;
+}

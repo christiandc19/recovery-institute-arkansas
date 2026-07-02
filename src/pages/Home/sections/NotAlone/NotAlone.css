@@ -1,0 +1,143 @@
+.not-alone {
+  padding: 120px 0;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)),
+    url("/images/not-alone-bg.webp");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.not-alone__container {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.not-alone__content span {
+  display: inline-block;
+  color: #86efac;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.not-alone__content h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  max-width: 680px;
+}
+
+.not-alone__content p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+.not-alone__list {
+  display: grid;
+  gap: 1.15rem;
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+.not-alone__list div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 16px 18px;
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  transition: .3s ease;
+}
+
+.not-alone__list div:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateX(8px);
+}
+
+.not-alone__list svg {
+  flex-shrink: 0;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 8px;
+
+  border-radius: 50%;
+
+  background: rgba(134,239,172,.15);
+
+  color: #86efac;
+}
+
+.not-alone__list span {
+  color: #ffffff;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0;
+
+  text-transform: none;
+
+  line-height: 1.5;
+}
+
+.not-alone__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--accent-color);
+  color: white;
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: var(--transition);
+}
+
+.not-alone__button:hover {
+  transform: translateY(-3px);
+}
+
+.not-alone__image img {
+  width: 100%;
+  min-height: 460px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
+}
+
+@media (max-width: 992px) {
+  .not-alone {
+    padding: 80px 0;
+  }
+
+  .not-alone__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .not-alone__image img {
+    min-height: 340px;
+  }
+
+  .not-alone__button {
+    width: 100%;
+    justify-content: center;
+  }
+}

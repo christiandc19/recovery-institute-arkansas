@@ -1,0 +1,131 @@
+.footer {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 36%),
+    linear-gradient(180deg, #0f172a, #07111f);
+  color: white;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 1.25fr 0.8fr 0.8fr 0.8fr;
+  gap: 4rem;
+  padding: 90px 0;
+}
+
+.footer__brand h2 {
+  max-width: 520px;
+  font-size: 2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.footer__brand h2::after,
+.footer__column h3::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 16px;
+  background: #86efac;
+}
+
+.footer__brand p {
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.footer__contact {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.footer__contact p,
+.footer__contact a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__contact svg {
+  width: 18px;
+  height: 18px;
+  padding: 12px;
+  border-radius: 50%;
+  background: rgba(134, 239, 172, 0.12);
+  color: #86efac;
+  flex-shrink: 0;
+}
+
+.footer__column h3 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.footer__column a,
+.footer__column p {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  transition: 0.3s ease;
+}
+
+.footer__column a svg,
+.footer__column p svg {
+  color: #86efac;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.footer__column a:hover {
+  color: #86efac;
+  transform: translateX(6px);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer__bottom-container {
+  padding: 34px 0;
+  text-align: center;
+}
+
+.footer__shield {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  border: 1px solid rgba(134, 239, 172, 0.35);
+  color: #86efac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__bottom p {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    padding: 70px 0;
+  }
+}

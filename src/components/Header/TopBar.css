@@ -1,0 +1,38 @@
+.topbar {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  font-size: 0.82rem;
+}
+
+.topbar__container {
+  min-height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar__item,
+.topbar__status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topbar__item {
+  color: inherit;
+}
+
+.topbar__status {
+  color: #86efac;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .topbar__container {
+    justify-content: center;
+  }
+
+  .topbar__right {
+    display: none;
+  }
+}
