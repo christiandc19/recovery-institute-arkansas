@@ -1,10 +1,13 @@
 import InnerPageHero from "../../components/Hero/InnerPageHero/InnerPageHero";
 import CallToAction from "../../components/sections/CallToAction/CallToAction";
 import ContactInfo from "./sections/ContactInfo/ContactInfo";
+import SEO from "../../components/SEO/SEO";
+import seo from "../../data/seo";
 
 function Contact() {
   return (
     <>
+      <SEO {...seo.contact} />
       <InnerPageHero
         eyebrow="Contact Us"
         title="Take the First Step Toward Recovery"

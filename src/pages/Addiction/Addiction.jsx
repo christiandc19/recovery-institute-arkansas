@@ -2,11 +2,14 @@ import InnerPageHero from "../../components/Hero/InnerPageHero/InnerPageHero";
 import CallToAction from "../../components/sections/CallToAction/CallToAction";
 import HomeFAQ from "../Home/sections/HomeFAQ/HomeFAQ";
 import AddictionGrid from "./sections/AddictionGrid/AddictionGrid";
+import SEO from "../../components/SEO/SEO";
+import seo from "../../data/seo";
 import "./Addiction.css";
 
 function Addiction() {
   return (
     <>
+      <SEO {...seo.addiction} />
       <InnerPageHero
         eyebrow="Addiction Treatment"
         title="Substance Abuse Treatment for Lasting Recovery"

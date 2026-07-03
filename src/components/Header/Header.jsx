@@ -38,9 +38,9 @@ function Header() {
                   {item.children && (
                     <div className="header__dropdown-menu">
                       {item.children.map((child) => (
-                        <NavLink key={child.path} to={child.path}>
-                          {child.title}
-                        </NavLink>
+                    <NavLink key={child.path} to={child.path} onClick={closeMenu}>
+                      {child.title}
+                    </NavLink>
                       ))}
                     </div>
                   )}

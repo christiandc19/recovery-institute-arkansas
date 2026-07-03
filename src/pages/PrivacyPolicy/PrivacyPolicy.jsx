@@ -1,10 +1,13 @@
 import InnerPageHero from "../../components/Hero/InnerPageHero/InnerPageHero";
 import Section from "../../components/ui/Section/Section";
+import SEO from "../../components/SEO/SEO";
+import seo from "../../data/seo";
 import "./PrivacyPolicy.css";
 
 function PrivacyPolicy() {
   return (
     <>
+      <SEO {...seo.privacyPolicy} />
       <InnerPageHero
         eyebrow="Privacy Policy"
         title="Your Privacy Matters"

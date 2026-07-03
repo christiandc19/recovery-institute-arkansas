@@ -8,11 +8,15 @@ import RecoveryJourney from "./sections/RecoveryJourney/RecoveryJourney";
 import NotAlone from "./sections/NotAlone/NotAlone";
 import HomeFAQ from "./sections/HomeFAQ/HomeFAQ";
 import CallToAction from "../../components/sections/CallToAction/CallToAction";
-
+import SEO from "../../components/SEO/SEO";
+import seo from "../../data/seo";
 
 function Home() {
+
   return (
     <>
+
+      <SEO {...seo.home} />
       <HomeHero />
       <TrustBar />
       <WhyChooseUs />

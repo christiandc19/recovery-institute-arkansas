@@ -1,10 +1,13 @@
 import InnerPageHero from "../../components/Hero/InnerPageHero/InnerPageHero";
 import Section from "../../components/ui/Section/Section";
+import SEO from "../../components/SEO/SEO";
+import seo from "../../data/seo";
 import "./Accessibility.css";
 
 function Accessibility() {
   return (
     <>
+      <SEO {...seo.accessibility} />
       <InnerPageHero
         eyebrow="Accessibility"
         title="Accessibility Statement"

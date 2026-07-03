@@ -43,13 +43,13 @@ function ProgramsGrid() {
       icon: <FaShieldAlt />,
       title: "Relapse Prevention",
       text: "Practical tools and guidance to help reduce relapse risks.",
-      link: "/programs",
+      link: "/programs/relapse-prevention",
     },
     {
       icon: <FaHandsHelping />,
       title: "Group Support",
       text: "A supportive environment where clients can connect, learn, and grow.",
-      link: "/programs",
+      link: "/programs/group-therapy",
     },
   ];
 

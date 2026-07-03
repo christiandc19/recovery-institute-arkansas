@@ -29,21 +29,6 @@
   transform: scale(1.02);
 }
 
-.header__logo span,
-.header__logo strong {
-  display: block;
-}
-
-.header__logo span {
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-}
-
-.header__logo strong {
-  font-size: 1rem;
-  letter-spacing: 0.03em;
-}
-
 .header__menu {
   display: flex;
   align-items: center;

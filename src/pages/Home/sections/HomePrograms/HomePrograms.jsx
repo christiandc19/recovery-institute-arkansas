@@ -6,42 +6,48 @@ import {
   FaUsers,
   FaArrowRight,
 } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 import "./HomePrograms.css";
 
 function HomePrograms() {
   const programs = [
-    {
-      icon: <FaUsers />,
-      title: "IOP Substance Abuse",
-      text: "Structured outpatient support for individuals seeking recovery while maintaining daily responsibilities.",
-    },
-    {
-      icon: <FaWineBottle />,
-      title: "Alcohol Addiction",
-      text: "Compassionate treatment support for individuals struggling with alcohol use.",
-    },
-    {
-      icon: <FaSyringe />,
-      title: "Heroin Addiction",
-      text: "Recovery-focused care for individuals impacted by heroin addiction.",
-    },
-    {
-      icon: <FaCapsules />,
-      title: "Fentanyl Addiction",
-      text: "Supportive treatment for those facing fentanyl and opioid-related substance use.",
-    },
-    {
-      icon: <FaUserShield />,
-      title: "Relapse Prevention",
-      text: "Tools, education, and support to help clients build lasting recovery habits.",
-    },
-    {
-      icon: <FaUsers />,
-      title: "Group Support",
-      text: "A supportive environment where clients can connect, grow, and heal together.",
-    },
-  ];
+  {
+    icon: <FaUsers />,
+    title: "IOP Substance Abuse",
+    text: "Structured outpatient support for individuals seeking recovery while maintaining daily responsibilities.",
+    link: "/iop-substance-abuse",
+  },
+  {
+    icon: <FaWineBottle />,
+    title: "Alcohol Addiction",
+    text: "Compassionate treatment support for individuals struggling with alcohol use.",
+    link: "/addiction/alcohol-addiction",
+  },
+  {
+    icon: <FaSyringe />,
+    title: "Heroin Addiction",
+    text: "Recovery-focused care for individuals impacted by heroin addiction.",
+    link: "/addiction/heroin-addiction",
+  },
+  {
+    icon: <FaCapsules />,
+    title: "Fentanyl Addiction",
+    text: "Supportive treatment for those facing fentanyl and opioid-related substance use.",
+    link: "/addiction/fentanyl-addiction",
+  },
+  {
+    icon: <FaUserShield />,
+    title: "Relapse Prevention",
+    text: "Tools, education, and support to help clients build lasting recovery habits.",
+    link: "/programs/relapse-prevention",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Group Support",
+    text: "A supportive environment where clients can connect, grow, and heal together.",
+    link: "/programs/group-therapy",
+  },
+];
 
   return (
     <section className="home-programs">
@@ -64,9 +70,9 @@ function HomePrograms() {
 
               <p>{program.text}</p>
 
-              <a href="/programs">
+              <Link to={program.link}>
                 Learn More <FaArrowRight />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

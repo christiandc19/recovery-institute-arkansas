@@ -1,14 +1,16 @@
 import InnerPageHero from "../../components/Hero/InnerPageHero/InnerPageHero";
 import CallToAction from "../../components/sections/CallToAction/CallToAction";
 import HomeFAQ from "../Home/sections/HomeFAQ/HomeFAQ";
-
 import AdmissionsIntro from "./sections/AdmissionsIntro/AdmissionsIntro";
 import AdmissionsSteps from "./sections/AdmissionsSteps/AdmissionsSteps";
 import WhatToBring from "./sections/WhatToBring/WhatToBring";
+import SEO from "../../components/SEO/SEO";
+import seo from "../../data/seo";
 
 function Admissions() {
   return (
     <>
+      <SEO {...seo.admissions} />
       <InnerPageHero
         eyebrow="Admissions"
         title="Starting Recovery Should Feel Simple"

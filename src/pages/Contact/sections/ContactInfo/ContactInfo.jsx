@@ -10,6 +10,19 @@ import {
 import SITE from "../../../../constants/site";
 import "./ContactInfo.css";
 
+function formatPhoneNumber(value) {
+  const numbers = value.replace(/\D/g, "").slice(0, 10);
+
+  if (numbers.length <= 3) return numbers;
+  if (numbers.length <= 6) return `(${numbers.slice(0, 3)}) ${numbers.slice(3)}`;
+
+  return `(${numbers.slice(0, 3)}) ${numbers.slice(3, 6)}-${numbers.slice(6)}`;
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 function ContactInfo() {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,23 +38,50 @@ function ContactInfo() {
     error: "",
   });
 
-  function handleChange(e) {
-    const { name, value } = e.target;
+function handleChange(e) {
+  const { name, value } = e.target;
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  }
+  setFormData((prev) => ({
+    ...prev,
+    [name]: name === "phone" ? formatPhoneNumber(value) : value,
+  }));
+}
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    setStatus({
-      loading: true,
-      success: "",
-      error: "",
-    });
+    if (formData.phone.replace(/\D/g, "").length !== 10) {
+      setStatus({
+        loading: false,
+        success: "",
+        error: "Please enter a valid 10-digit phone number.",
+      });
+      return;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      setStatus({
+        loading: false,
+        success: "",
+        error: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    if (formData.message.trim().length < 10) {
+      setStatus({
+        loading: false,
+        success: "",
+        error: "Please enter a message with at least 10 characters.",
+      });
+      return;
+    }    
+
+        setStatus({
+          loading: true,
+          success: "",
+          error: "",
+        });
 
     try {
       await emailjs.send(
@@ -181,10 +221,15 @@ function ContactInfo() {
             name="message"
             placeholder="How can we help?"
             rows="5"
+            maxLength="500"
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
+
+          <p className="contact-info__counter">
+            {formData.message.length}/500 characters
+          </p>
 
           {status.error && <p className="contact-info__error">{status.error}</p>}
           {status.success && (
