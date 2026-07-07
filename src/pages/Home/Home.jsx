@@ -10,13 +10,16 @@ import HomeFAQ from "./sections/HomeFAQ/HomeFAQ";
 import CallToAction from "../../components/sections/CallToAction/CallToAction";
 import SEO from "../../components/SEO/SEO";
 import seo from "../../data/seo";
-
+import organizationSchema from "../../data/schema";
 function Home() {
 
   return (
     <>
 
-      <SEO {...seo.home} />
+      <SEO
+        {...seo.home}
+        schema={organizationSchema}
+      />
       <HomeHero />
       <TrustBar />
       <WhyChooseUs />
