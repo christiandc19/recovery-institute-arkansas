@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import SEO from "../../components/SEO/SEO";
 import {
   FaUsers,
   FaShieldAlt,
@@ -21,6 +22,16 @@ import "./ProgramDetail.css";
 function ProgramDetail() {
   const { slug } = useParams();
   const program = programDetails[slug];
+
+  const programSeo = {
+    title: `${program?.title || "Program"} in Searcy, AR`,
+    description:
+      program?.heroText ||
+      "Learn about recovery programs at The Recovery Institute of Arkansas.",
+    canonical: `/programs/${slug}`,
+    image: program?.image,
+  };
+
 
   if (!program) {
     return (
@@ -66,6 +77,9 @@ function ProgramDetail() {
 
   return (
     <>
+
+
+      <SEO {...programSeo} />
       <InnerPageHero
         eyebrow={program.eyebrow}
         title={program.title}

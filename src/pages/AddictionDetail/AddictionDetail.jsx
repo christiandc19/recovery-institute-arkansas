@@ -6,11 +6,20 @@ import addictions from "../../data/addictions";
 import SignsTreatment from "./sections/SignsTreatment/SignsTreatment";
 import TreatmentApproach from "./sections/TreatmentApproach/TreatmentApproach";
 import AddictionProcess from "./sections/AddictionProcess/AddictionProcess";
+import SEO from "../../components/SEO/SEO";
 import "./AddictionDetail.css";
 
 function AddictionDetail() {
   const { slug } = useParams();
   const addiction = addictions[slug];
+  const addictionSeo = {
+  title: `${addiction?.title || "Addiction Treatment"} in Searcy, AR`,
+  description:
+    addiction?.heroText ||
+    "Learn about outpatient addiction treatment at The Recovery Institute of Arkansas.",
+  canonical: `/addiction/${slug}`,
+  image: addiction?.image,
+};
 
   if (!addiction) {
     return (
@@ -25,6 +34,7 @@ function AddictionDetail() {
 
   return (
     <>
+      <SEO {...addictionSeo} />
       <InnerPageHero
         eyebrow="Addiction Treatment"
         title={addiction.title}
